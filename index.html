@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src=""" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>2nd Year Student @ UT Austin</p>
+            <h1>Hi, I'm <span>Justin Song</span> <br> from Allen, TX.</h1>
+        </div>
+    </div>
+</div>
+<!--------------------about section------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/studiousfoo.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello I'm Justin Song! I'm currently a rising sophomore at the University of Texas at Austin studying for my degree in Statistics and Data Science and passionate about turning data into actionable insights
+                    My academic journey has equipped me with strong tech skillsets and I'm always eager to learn and apply new techniques to real-world challenges. Explore my portfolio and let's connect!
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br></li>
+                        <li><span>Java</span><br></li>
+                        <li><span>Javascript</span><br></li>
+                        <li><span>HTML</span><br></li>
+                        <li><span>CSS</span><br></li>
+                        <li><span>R</span><br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id ="education">
+                    <ul>
+                        <li><span>UT Austin</span><br>Bachelor of Science in Statistics and Data Science (2023-2027)</li>
+                        <li><span>GPA: 3.92</span><br></li>
+ 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------portfolio------------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/image1.jpg">
+                <div class="layer">
+                    <h3>Pomodoro App</h3>
+                    <p>Developed a web application that incorporated interactive video and sound features and utilizes UI and UX elements.
+                        Created with HTML, CSS, JavaScript, and Python.
+                        Implemented an adjustable timer based on study times along with music and natural ambience</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/image2.png">
+                <div class="layer">
+                    <h3>Valorant Player Tracker Analysis</h3>
+                    <p>Conducted statistical analysis on Valorant professional players’ performance metrics.
+                        Utilized R programming language to process and organize data from European and North American players.
+                        Explored key metrics such as Average Combat Score, Headshot Percentage, Opening Duel Win Percentage, and Number
+                        of Clutches.
+                        Created team-level insights through mean calculations and categorization.
+                        Employed ggplot for visualizations, including box plots, histograms, and scatter plots, to reveal insights.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/image3.png">
+                <div class="layer">
+                    <h3>Amazon Price Checker</h3>
+                    <p>Created a Python script that emails the user of a product’s price drop after they input a link from Amazon and the
+                        desired price of the product.
+                        Developed so that the user receives an email whenever the price drops below or hits the desired price.
+                        Utilized the Beautiful Soup Python package for web scraping</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------contact------------>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> jujiwoo@utexas.edu</p>
+                <p><i class="fa-solid fa-phone"></i> 972-370-4883</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/justin.songgg"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/jujiwoo"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Justin.</p>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+</body>
+</html>
